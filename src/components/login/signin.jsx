@@ -2,13 +2,13 @@ import React from "react";
 import Image from "../../assets/signin/wrap.svg";
 import xmark from "../../assets/signin/x_mark.svg";
 
-export default function SignIn() {
+export default function SignIn({ onClose }) {
     return (
         <>
-            <div className="fixed inset-0 bg-blue-950 bg-opacity-50 w-2/3"></div>
+            <div onClick={onClose} className="fixed inset-0 bg-blue-950 bg-opacity-50 w-2/3"></div>
             <div className="w-1/3 absolute z-20 right-0 bg-white pb-80">
                 <div className="ml-8 mt-5">
-                    <button>
+                    <button onClick={onClose}>
                         {" "}
                         <img height={25} width={25} src={xmark} />
                     </button>
@@ -29,7 +29,7 @@ export default function SignIn() {
                 </div>
                 <div className="pl-10 mt-20">
                     <input
-                        className="border-2 pl-6 pr-20 p-4"
+                        className="border border-gray-500 pl-6 pr-20 p-4"
                         placeholder="Phone number"
                     ></input>
                 </div>

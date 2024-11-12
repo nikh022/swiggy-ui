@@ -8,21 +8,38 @@ import helpSymbol from "../assets/navbar_icons/help.svg";
 import cartSymbol from "../assets/navbar_icons/cart.svg";
 import SignIn from "./login/signin";
 import { useState } from "react";
+import Location from "./location";
 
 export default function Navbar() {
     const [showSignIn, setShowSignIn] = useState(false);
+    const [showLocation, setShowLocation] = useState(false);
     return (
         <>
-            {showSignIn && <SignIn />}
+            {showLocation && <Location onClose={() => setShowLocation(false)} />}
+            {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
             <div className="flex p-3 px-7 shadow-md">
                 <div className="flex w-1/3">
                     <div className="w-1/5 pt-1">
                         <img src={SwiggyLogo} />
                     </div>
-                    <div className="flex w-4/5 p-4 text-sm">
-                        <div className="pr-3 text-gray-700 font-bold underline">Other</div>
-                        <div className="text-gray-500">Bengluru, Karnataka, India</div>
-                        <img className="pl-2" height={25} width={30} src={downSymbol}></img>
+                    <div
+                        onClick={() => {
+                            setShowLocation(true);
+                        }}
+                        className="flex w-4/5 p-4 text-sm"
+                    >
+                        <button className="pr-3 text-gray-700 font-bold underline">
+                            Other
+                        </button>
+                        <button className="text-gray-500">
+                            Bengluru, Karnataka, India
+                        </button>
+                        <img
+                            className="pl-2 pt-1 cursor-pointer"
+                            height={25}
+                            width={30}
+                            src={downSymbol}
+                        ></img>
                     </div>
                 </div>
                 <div className="flex justify-between w-2/3 grid-cols-7 p-4 text-gray-700 font-semibold">
@@ -56,20 +73,17 @@ export default function Navbar() {
                         </div>
                         <div>Help</div>
                     </div>
-                    <div className="flex">
-                        <div className="pr-2 pt-1">
-                            <img height={21} width={21} src={signinSymbol} />
-                        </div>
-                        <div>
-                            {" "}
-                            <button
-                                onClick={() => {
-                                    setShowSignIn(true);
-                                }}
-                            >
-                                Sign In{" "}
-                            </button>
-                        </div>
+                    <div
+                        className="flex items-center hover:text-orange-600 cursor-pointer"
+                        onClick={() => setShowSignIn(true)}
+                    >
+                        <img
+                            src={signinSymbol}
+                            height={28}
+                            width={28}
+                            className="pr-2 pt-1"
+                        />
+                        <div>Sign In</div>
                     </div>
                     <div className="flex">
                         <div className="pr-2 pt-1">
