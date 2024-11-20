@@ -1,10 +1,12 @@
-import Navbar from "./components/navbar"
+import React from 'react';
+import './App.css';
 
+import FrontPage from "./pages/frontPage"
 
 function App() {
   return (
     <>
-      <Navbar />
+      <FrontPage />
     </>
   )
 }
