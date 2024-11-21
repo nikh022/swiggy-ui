@@ -17,7 +17,7 @@ export default function Navbar() {
         <>
             {showLocation && <Location onClose={() => setShowLocation(false)} />}
             {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
-            <div className="flex p-3 px-7 shadow-md">
+            <div className="flex p-3 px-7 bg-white shadow-md sticky top-0 ">
                 <div className="flex w-1/3">
                     <div className="w-1/5 pt-1">
                         <img src={SwiggyLogo} />
