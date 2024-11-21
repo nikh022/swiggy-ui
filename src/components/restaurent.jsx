@@ -1,5 +1,6 @@
 import mcDonald from "../assets/restaurantSlider/mcDonald.jpg";
 import ratingStar from "../assets/ratingStar.svg";
+import FilterBar from "./filterBar"
 
 export default function Restaurents() {
     return (
@@ -8,6 +9,7 @@ export default function Restaurents() {
                 <div className="text-2xl">
                     <b>Restaurants with online food delivery in Bangalore</b>
                 </div>
+                <FilterBar />
                 <div className="grid grid-cols-4">
                     <div className="mt-6 transition ease-in-out hover:translate-y-1 hover:scale-110 duration-300 ..">
                         <div>
