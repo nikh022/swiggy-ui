@@ -10,7 +10,7 @@ export default function Restaurents() {
                     <b>Restaurants with online food delivery in Bangalore</b>
                 </div>
                 <FilterBar />
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-4 pb-12">
                     <div className="mt-6 transition ease-in-out hover:translate-y-1 hover:scale-110 duration-300 ..">
                         <div>
                             <img
@@ -244,6 +244,7 @@ export default function Restaurents() {
                         </div>
                     </div>
                 </div>
+                <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-400" />
             </div>
         </>
     );
