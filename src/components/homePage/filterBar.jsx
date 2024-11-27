@@ -1,5 +1,5 @@
-import filterSign from "../assets/filterBar/filterSign.svg";
-import downSymbol from "../assets/filterBar/downSymbol.svg"
+import filterSign from "../../assets/filterBar/filterSign.svg";
+import downSymbol from "../../assets/filterBar/downSymbol.svg"
 
 export default function FilterPanel() {
     return (

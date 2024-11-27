@@ -1,10 +1,9 @@
-
-import RecipeSlider from "../components/recipeSlider";
-import Navbar from "../components/navbar";
-import RestaurantSlider from "../components/restaurantSlider";
-import Restaurents from "../components/restaurent";
-import AboveFooter from "../components/aboveFooter";
-import Footer from "../components/footer";
+import RecipeSlider from "../components/homePage/recipeSlider";
+import Navbar from "../components/homePage/navbar";
+import RestaurantSlider from "../components/homePage/restaurantSlider";
+import Restaurents from "../components/homePage/restaurent";
+import AboveFooter from "../components/homePage/aboveFooter";
+import Footer from "../components/homePage/footer";
 
 export default function FrontPage(){
     return <>

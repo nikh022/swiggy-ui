@@ -1,13 +1,13 @@
-import dominos from "../assets/restaurantSlider/dominos.jpg";
-import mcDonald from "../assets/restaurantSlider/mcDonald.jpg";
-import kfc from "../assets/restaurantSlider/kfc.jpg";
-import californiaBurrito from "../assets/restaurantSlider/californiaBurrito.jpg";
-import dailyKitchen from "../assets/restaurantSlider/dailyKitchen.jpg";
-import icecream from "../assets/restaurantSlider/icecream.jpg";
-import pizzahut from "../assets/restaurantSlider/pizzahut.jpg";
-import subway from "../assets/restaurantSlider/subway.jpg";
-import wowBowl from "../assets/restaurantSlider/wowBowl.jpg";
-import ratingStar from "../assets/ratingStar.svg";
+import dominos from "../../assets/restaurantSlider/dominos.jpg";
+import mcDonald from "../../assets/restaurantSlider/mcDonald.jpg";
+import kfc from "../../assets/restaurantSlider/kfc.jpg";
+import californiaBurrito from "../../assets/restaurantSlider/californiaBurrito.jpg";
+import dailyKitchen from "../../assets/restaurantSlider/dailyKitchen.jpg";
+import icecream from "../../assets/restaurantSlider/icecream.jpg";
+import pizzahut from "../../assets/restaurantSlider/pizzahut.jpg";
+import subway from "../../assets/restaurantSlider/subway.jpg";
+import wowBowl from "../../assets/restaurantSlider/wowBowl.jpg";
+import ratingStar from "../../assets/ratingStar.svg";
 
 export default function RestaurantSlider() {
     return (

@@ -1,17 +1,17 @@
-import CholeBhature from "../assets/recipeSlider/CholeBhature.png";
-import Dosa from "../assets/recipeSlider/Dosa.png";
-import Biryani from "../assets/recipeSlider/Biryani.png";
-import Poori from "../assets/recipeSlider/Poori.png";
-import Cakes from "../assets/recipeSlider/Cakes.png";
-import Idli from "../assets/recipeSlider/Idli.png";
-import Paratha from "../assets/recipeSlider/Paratha.png";
-import Omelette from "../assets/recipeSlider/Omelette.png";
-import Vada from "../assets/recipeSlider/Vada.png";
-import Appam from "../assets/recipeSlider/Appam.png";
-import Pancakes from "../assets/recipeSlider/Pancakes.png";
-import Parotta from "../assets/recipeSlider/Parotta.png";
-import Poha from "../assets/recipeSlider/Poha.png";
-import Salad from "../assets/recipeSlider/Salad.png";
+import CholeBhature from "../../assets/recipeSlider/CholeBhature.png";
+import Dosa from "../../assets/recipeSlider/Dosa.png";
+import Biryani from "../../assets/recipeSlider/Biryani.png";
+import Poori from "../../assets/recipeSlider/Poori.png";
+import Cakes from "../../assets/recipeSlider/Cakes.png";
+import Idli from "../../assets/recipeSlider/Idli.png";
+import Paratha from "../../assets/recipeSlider/Paratha.png";
+import Omelette from "../../assets/recipeSlider/Omelette.png";
+import Vada from "../../assets/recipeSlider/Vada.png";
+import Appam from "../../assets/recipeSlider/Appam.png";
+import Pancakes from "../../assets/recipeSlider/Pancakes.png";
+import Parotta from "../../assets/recipeSlider/Parotta.png";
+import Poha from "../../assets/recipeSlider/Poha.png";
+import Salad from "../../assets/recipeSlider/Salad.png";
 
 export default function RecipeSlider() {
     return (

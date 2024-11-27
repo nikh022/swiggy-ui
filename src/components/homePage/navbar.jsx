@@ -1,14 +1,14 @@
-import SwiggyLogo from "../assets/navbar_icons/swiggy_logo.svg";
-import downSymbol from "../assets/navbar_icons/chevron_down.svg";
-import corporateImg from "../assets/navbar_icons/swiggy_corporate.svg";
-import searchSymbol from "../assets/navbar_icons/search.svg";
-import offerSymbol from "../assets/navbar_icons/offer.svg";
-import signinSymbol from "../assets/navbar_icons/signin.svg";
-import helpSymbol from "../assets/navbar_icons/help.svg";
-import cartSymbol from "../assets/navbar_icons/cart.svg";
-import SignIn from "./login/signin";
+import SwiggyLogo from "../../assets/navbar_icons/swiggy_logo.svg";
+import downSymbol from "../../assets/navbar_icons/chevron_down.svg";
+import corporateImg from "../../assets/navbar_icons/swiggy_corporate.svg";
+import searchSymbol from "../../assets/navbar_icons/search.svg";
+import offerSymbol from "../../assets/navbar_icons/offer.svg";
+import signinSymbol from "../../assets/navbar_icons/signin.svg";
+import helpSymbol from "../../assets/navbar_icons/help.svg";
+import cartSymbol from "../../assets/navbar_icons/cart.svg";
+import SignIn from "../login/signin";
 import { useState } from "react";
-import Location from "./location";
+import Location from "../location";
 
 export default function Navbar() {
     const [showSignIn, setShowSignIn] = useState(false);

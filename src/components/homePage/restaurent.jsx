@@ -1,5 +1,5 @@
-import mcDonald from "../assets/restaurantSlider/mcDonald.jpg";
-import ratingStar from "../assets/ratingStar.svg";
+import mcDonald from "../../assets/restaurantSlider/mcDonald.jpg";
+import ratingStar from "../../assets/ratingStar.svg";
 import FilterBar from "./filterBar"
 
 export default function Restaurents() {

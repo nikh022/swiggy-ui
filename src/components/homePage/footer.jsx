@@ -1,8 +1,8 @@
-import facebookLogo from "../assets/footer/facebook.png"
-import instagramLogo from "../assets/footer/instagram.jpg"
-import linkedinLogo from "../assets/footer/linkedin.png"
-import pinterestLogo from "../assets/footer/pinterest.png"
-import xLogo from "../assets/footer/x.jpg"
+import facebookLogo from "../../assets/footer/facebook.png"
+import instagramLogo from "../../assets/footer/instagram.jpg"
+import linkedinLogo from "../../assets/footer/linkedin.png"
+import pinterestLogo from "../../assets/footer/pinterest.png"
+import xLogo from "../../assets/footer/x.jpg"
 
 export default function Footer() {
     return (
