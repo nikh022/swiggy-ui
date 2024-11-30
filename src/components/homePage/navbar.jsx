@@ -9,10 +9,17 @@ import cartSymbol from "../../assets/navbar_icons/cart.svg";
 import SignIn from "../login/signin";
 import { useState } from "react";
 import Location from "../location";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
     const [showSignIn, setShowSignIn] = useState(false);
     const [showLocation, setShowLocation] = useState(false);
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/search");
+    }
     return (
         <>
             {showLocation && <Location onClose={() => setShowLocation(false)} />}
@@ -50,7 +57,7 @@ export default function Navbar() {
                         </div>
                         <div>Swiggy Corporate</div>
                     </div>
-                    <div className="flex">
+                    <div onClick={handleClick} className="flex cursor-pointer">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={searchSymbol} />
                         </div>

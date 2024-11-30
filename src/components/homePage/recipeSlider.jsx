@@ -13,140 +13,42 @@ import Parotta from "../../assets/recipeSlider/Parotta.png";
 import Poha from "../../assets/recipeSlider/Poha.png";
 import Salad from "../../assets/recipeSlider/Salad.png";
 
+const recipeImages = [
+  { src: Paratha, alt: "Paratha" },
+  { src: Dosa, alt: "Dosa" },
+  { src: Biryani, alt: "Biryani" },
+  { src: Poha, alt: "Poha" },
+  { src: Cakes, alt: "Cakes" },
+  { src: Idli, alt: "Idli" },
+  { src: CholeBhature, alt: "Chole Bhature" },
+  { src: Vada, alt: "Vada" },
+  { src: Omelette, alt: "Omelette" },
+  { src: Pancakes, alt: "Pancakes" },
+  { src: Parotta, alt: "Parotta" },
+  { src: Poori, alt: "Poori" },
+  { src: Salad, alt: "Salad" },
+  { src: Appam, alt: "Appam" }
+];
+
 export default function RecipeSlider() {
-    return (
-        <>
-            <div className="mx-40 mt-4 text-2xl">
-                <b>What's on your mind?</b>
-            </div>
-            <div className="flex flex-nowrap overflow-x-auto space-x-4 mx-40 pb-12 pt-2 hide-scrollbar border-b-2">
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Paratha}
-                        alt="Image 1"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Dosa}
-                        alt="Image 2"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Biryani}
-                        alt="Image 3"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Poha}
-                        alt="Image 4"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Cakes}
-                        alt="Image 5"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Idli}
-                        alt="Image 6"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={CholeBhature}
-                        alt="Image 7"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Vada}
-                        alt="Image 8"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Omelette}
-                        alt="Image 9"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Pancakes}
-                        alt="Image 10"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Parotta}
-                        alt="Image 11"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Poori}
-                        alt="Image 12"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Salad}
-                        alt="Image 13"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-                <div className="flex-none">
-                    <img
-                        width={144}
-                        height={180}
-                        src={Appam}
-                        alt="Image 14"
-                        className=" object-cover rounded-lg"
-                    />
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="mx-40 mt-4 text-2xl">
+        <b>What's on your mind?</b>
+      </div>
+      <div className="flex flex-nowrap overflow-x-auto space-x-4 mx-40 pb-12 pt-2 hide-scrollbar border-b-2">
+        {recipeImages.map((image, index) => (
+          <div key={index} className="flex-none">
+            <img
+              width={144}
+              height={180}
+              src={image.src}
+              alt={image.alt}
+              className="object-cover rounded-lg"
+            />
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
