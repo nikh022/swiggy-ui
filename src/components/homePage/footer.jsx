@@ -1,79 +1,111 @@
-import facebookLogo from "../../assets/footer/facebook.png"
-import instagramLogo from "../../assets/footer/instagram.jpg"
-import linkedinLogo from "../../assets/footer/linkedin.png"
-import pinterestLogo from "../../assets/footer/pinterest.png"
-import xLogo from "../../assets/footer/x.jpg"
+import facebookLogo from "../../assets/footer/facebook.png";
+import instagramLogo from "../../assets/footer/instagram.jpg";
+import linkedinLogo from "../../assets/footer/linkedin.png";
+import pinterestLogo from "../../assets/footer/pinterest.png";
+import xLogo from "../../assets/footer/x.jpg";
+
+const footerLinks = {
+    company: [
+        "About Us",
+        "Swiggy Corporate",
+        "Careers",
+        "Team",
+        "Swiggy One",
+        "Swiggy Instamart",
+        "Swiggy Dineout",
+        "Swiggy Genie"
+    ],
+    contact: [
+        "Contact Us",
+        "Help & Support",
+        "Partner with Us",
+        "Ride with Us"
+    ],
+    legal: [
+        "Terms & Conditions",
+        "Cookie Policy",
+        "Privacy Policy",
+        "Investor Relations",
+        "Life at Swiggy"
+    ],
+    explore: [
+        "Swiggy News",
+        "Snackables",
+        "Available in:",
+        "Bangalore",
+        "Gurgaon",
+        "Hyderabad",
+        "Delhi",
+        "Mumbai",
+        "Pune",
+        "more cities"
+    ],
+    social: [
+        { name: "Facebook", logo: facebookLogo, alt: "Facebook" },
+        { name: "Instagram", logo: instagramLogo, alt: "Instagram" },
+        { name: "X", logo: xLogo, alt: "X (Twitter)" },
+        { name: "Pinterest", logo: pinterestLogo, alt: "Pinterest" },
+        { name: "LinkedIn", logo: linkedinLogo, alt: "LinkedIn" }
+    ]
+};
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 text-gray-700 py-10 px-8">
+        <footer className="bg-gray-800 text-white py-10 px-20">
             <div className="container mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
                     <div>
-                        <h4 className="font-semibold text-black text-lg mb-3">Company</h4>
+                        <h4 className="font-semibold text-lg mb-3">Company</h4>
                         <ul className="space-y-2">
-                            <li>About Us</li>
-                            <li>Swiggy Corporate</li>
-                            <li>Careers</li>
-                            <li>Team</li>
-                            <li>Swiggy One</li>
-                            <li>Swiggy Instamart</li>
-                            <li>Swiggy Dineout</li>
-                            <li>Swiggy Genie</li>
+                            {footerLinks.company.map((item, index) => (
+                                <li key={index} className="hover:text-orange-500 transition-colors">
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-semibold text-black text-lg mb-3">Contact</h4>
+                        <h4 className="font-semibold text-lg mb-3">Contact</h4>
                         <ul className="space-y-2">
-                            <li>Contact Us</li>
-                            <li>Help & Support</li>
-                            <li>Partner with Us</li>
-                            <li>Ride with Us</li>
+                            {footerLinks.contact.map((item, index) => (
+                                <li key={index} className="hover:text-orange-500 transition-colors">
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-semibold text-black text-lg mb-3">Legal</h4>
+                        <h4 className="font-semibold text-lg mb-3">Legal</h4>
                         <ul className="space-y-2">
-                            <li>Terms & Conditions</li>
-                            <li>Cookie Policy</li>
-                            <li>Privacy Policy</li>
-                            <li>Investor Relations</li>
-                            <li>Life at Swiggy</li>
+                            {footerLinks.legal.map((item, index) => (
+                                <li key={index} className="hover:text-orange-500 transition-colors">
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-semibold text-black text-lg mb-3">Explore with Swiggy</h4>
+                        <h4 className="font-semibold text-lg mb-3">Explore with Swiggy</h4>
                         <ul className="space-y-2">
-                            <li>Swiggy News</li>
-                            <li>Snackables</li>
-                            <li>Available in:</li>
-                            <li>Bangalore</li>
-                            <li>Gurgaon</li>
-                            <li>Hyderabad</li>
-                            <li>Delhi</li>
-                            <li>Mumbai</li>
-                            <li>Pune</li>
-                            <li className="border border-gray-400 mr-36 rounded-md p-1">679 cities</li>
+                            {footerLinks.explore.map((item, index) => (
+                                <li key={index} className="hover:text-orange-500 transition-colors">
+                                    {item}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div>
-                        <h4 className="font-semibold text-black text-lg mb-3">Follow Us</h4>
+                        <h4 className="font-semibold text-lg mb-3">Follow Us</h4>
                         <ul className="flex space-x-4">
-                            <li>
-                                    <img src={facebookLogo} alt="LinkedIn" className="w-6 h-6" />
-                            </li>
-                            <li>
-                                    <img src={instagramLogo} alt="Instagram" className="w-6 h-6" />
-                            </li>
-                            <li>
-                                    <img src={xLogo} alt="Facebook" className="w-6 h-6" />
-                            </li>
-                            <li>
-                                    <img src={pinterestLogo} alt="Pinterest" className="w-6 h-6" />
-                            </li>
-                            <li>
-                                    <img src={linkedinLogo} alt="Pinterest" className="w-6 h-6" />
-                            </li>
+                            {footerLinks.social.map((social, index) => (
+                                <li key={index}>
+                                    <img
+                                        src={social.logo}
+                                        alt={social.alt}
+                                        className="w-6 h-6 hover:opacity-75 transition-opacity"
+                                    />
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
