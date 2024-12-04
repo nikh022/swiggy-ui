@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "../../assets/signin/wrap.svg";
 import xmark from "../../assets/signin/x_mark.svg";
 
 export default function SignIn({ onClose }) {
+    useEffect(() => {
+        document.body.classList.add("no-scroll");
+        return () => {
+            document.body.classList.remove("no-scroll");
+        };
+    });
+
     return (
         <>
-            <div onClick={onClose} className="fixed inset-0 bg-blue-950 bg-opacity-50 w-2/3"></div>
+            <div
+                onClick={onClose}
+                className="fixed inset-0 bg-blue-950 bg-opacity-50 w-2/3"
+            ></div>
             <div className="w-1/3 absolute z-20 right-0 bg-white pb-80">
                 <div className="ml-8 mt-5">
                     <button onClick={onClose}>

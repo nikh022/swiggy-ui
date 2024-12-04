@@ -1,7 +1,15 @@
 import xmark from "../../assets/location/x_mark.svg";
-import locationMark from "../../assets/location/locationMark.svg"
+import locationMark from "../../assets/location/locationMark.svg";
+import { useEffect } from "react";
 
 export default function Location({ onClose }) {
+    useEffect(() => {
+        document.body.classList.add("no-scroll");
+        return () => {
+            document.body.classList.remove("no-scroll");
+        };
+    });
+
     return (
         <>
             <div
