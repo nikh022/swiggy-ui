@@ -17,7 +17,10 @@ export default function Navbar() {
 
     const navigate = useNavigate();
 
-    const handleClick = () => {
+    const handleClick1 = () => {
+        navigate("/");
+    }
+    const handleClick2 = () => {
         navigate("/search");
     }
     return (
@@ -26,7 +29,7 @@ export default function Navbar() {
             {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
             <div className="flex p-3 px-7 bg-white shadow-md sticky top-0 ">
                 <div className="flex w-1/3">
-                    <div className="w-1/5 pt-1">
+                    <div onClick={handleClick1} className="w-1/5 pt-1 cursor-pointer">
                         <img src={SwiggyLogo} />
                     </div>
                     <div
@@ -57,7 +60,7 @@ export default function Navbar() {
                         </div>
                         <div>Swiggy Corporate</div>
                     </div>
-                    <div onClick={handleClick} className="flex cursor-pointer">
+                    <div onClick={handleClick2} className="flex cursor-pointer">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={searchSymbol} />
                         </div>
