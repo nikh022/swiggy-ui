@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "../../assets/signin/wrap.svg";
 import xmark from "../../assets/signin/x_mark.svg";
+import SignUp from "./signup";
 
 export default function SignIn({ onClose }) {
+    const [showSignUp, setShowSignUp] = useState(false);
+
     useEffect(() => {
         document.body.classList.add("no-scroll");
         return () => {
@@ -12,11 +15,12 @@ export default function SignIn({ onClose }) {
 
     return (
         <>
+        {showSignUp && <SignUp onClose={() => setShowSignUp(false)} />}
             <div
                 onClick={onClose}
                 className="fixed inset-0 bg-blue-950 bg-opacity-50 w-2/3"
             ></div>
-            <div className="w-1/3 absolute z-20 right-0 bg-white pb-80">
+            <div className="w-1/3 absolute z-10 right-0 bg-white pb-80">
                 <div className="ml-8 mt-5">
                     <button onClick={onClose}>
                         {" "}
@@ -25,11 +29,11 @@ export default function SignIn({ onClose }) {
                 </div>
                 <div className="flex">
                     <div className="mr-20 pl-10 pt-10">
-                        <div className="font-semibold text-4xl pb-2">Login</div>
+                        <div className="font-semibold text-3xl pb-2">Login</div>
                         <div>
                             <div className="flex">
                                 <div>or</div>
-                                <div className="pl-2 text-orange-600">create an account</div>
+                                <div onClick={() => setShowSignUp(true)} className="pl-2 text-orange-600 cursor-pointer">create an account</div>
                             </div>
                         </div>
                     </div>
