@@ -19,7 +19,7 @@ const restaurants = [
     location: "Local Nagar",
   },
   {
-    name: "McDonald’s",
+    name: "McDonald's",
     image: mcDonald,
     rating: 4.1,
     time: "30-35 min",
@@ -86,7 +86,7 @@ export default function RestaurantSlider() {
         {restaurants.map((restaurant, index) => (
           <div
             key={index}
-            className="flex-none transition ease-in-out hover:translate-y-1 hover:scale-110 duration-300"
+            className="flex-none transition ease-in-out hover:translate-y-1 hover:scale-110 duration-300 z-10"
           >
             <div>
               <img

@@ -6,14 +6,9 @@ import offerSymbol from "../../assets/navbar_icons/offer.svg";
 import signinSymbol from "../../assets/navbar_icons/signin.svg";
 import helpSymbol from "../../assets/navbar_icons/help.svg";
 import cartSymbol from "../../assets/navbar_icons/cart.svg";
-import SignIn from "../login/signin";
-import { useState } from "react";
-import Location from "../location";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-    const [showSignIn, setShowSignIn] = useState(false);
-    const [showLocation, setShowLocation] = useState(false);
 
     const navigate = useNavigate();
 
@@ -25,17 +20,12 @@ export default function Navbar() {
     }
     return (
         <>
-            {showLocation && <Location onClose={() => setShowLocation(false)} />}
-            {showSignIn && <SignIn onClose={() => setShowSignIn(false)} />}
-            <div className="flex p-3 px-7 bg-white shadow-md sticky top-0 ">
+            <div className="flex p-3 px-7 bg-white shadow-md sticky top-0 z-50 ">
                 <div className="flex w-1/3">
                     <div onClick={handleClick1} className="w-1/5 pt-1 cursor-pointer">
                         <img src={SwiggyLogo} />
                     </div>
                     <div
-                        onClick={() => {
-                            setShowLocation(true);
-                        }}
                         className="flex w-4/5 p-4 text-sm"
                     >
                         <button className="pr-3 text-gray-700 font-bold underline">
@@ -54,19 +44,19 @@ export default function Navbar() {
                 </div>
                 <div className="flex justify-between w-2/3 grid-cols-7 p-4 text-gray-700 font-semibold">
                     <div></div>
-                    <div className="flex">
+                    <div className="flex cursor-pointer hover:text-orange-600">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={corporateImg} />
                         </div>
                         <div>Swiggy Corporate</div>
                     </div>
-                    <div onClick={handleClick2} className="flex cursor-pointer">
+                    <div onClick={handleClick2} className="flex cursor-pointer hover:text-orange-600">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={searchSymbol} />
                         </div>
                         <div>Search</div>
                     </div>
-                    <div className="flex">
+                    <div className="flex cursor-pointer hover:text-orange-600">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={offerSymbol} />
                         </div>
@@ -77,7 +67,7 @@ export default function Navbar() {
                             </span>
                         </div>
                     </div>
-                    <div className="flex">
+                    <div className="flex cursor-pointer hover:text-orange-600">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={helpSymbol} />
                         </div>
@@ -85,7 +75,7 @@ export default function Navbar() {
                     </div>
                     <div
                         className="flex items-center hover:text-orange-600 cursor-pointer"
-                        onClick={() => setShowSignIn(true)}
+
                     >
                         <img
                             src={signinSymbol}
@@ -95,7 +85,7 @@ export default function Navbar() {
                         />
                         <div>Sign In</div>
                     </div>
-                    <div className="flex">
+                    <div className="flex cursor-pointer hover:text-orange-600">
                         <div className="pr-2 pt-1">
                             <img height={21} width={21} src={cartSymbol} />
                         </div>

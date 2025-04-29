@@ -5,13 +5,13 @@ import Restaurents from "../components/homePage/restaurent";
 import AboveFooter from "../components/homePage/aboveFooter";
 import Footer from "../components/homePage/footer";
 
-export default function FrontPage(){
+export default function FrontPage() {
     return <>
-    <Navbar />
-    <RecipeSlider />
-    <RestaurantSlider />
-    <Restaurents />
-    <AboveFooter />
-    <Footer />
+        <Navbar />
+        <RecipeSlider />
+        <RestaurantSlider />
+        <Restaurents />
+        <AboveFooter />
+        <Footer />
     </>
 }
